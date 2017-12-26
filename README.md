@@ -1,6 +1,6 @@
 # AccountingFormat
-Edittext and TextView Accounting format (IDR, USD and Custom)__
-to use__
+Edittext and TextView Accounting format (IDR, USD and Custom) <br/>
+to use <br/>
 
 
 
