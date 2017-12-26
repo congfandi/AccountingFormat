@@ -3,7 +3,7 @@ Edittext and TextView Accounting format (IDR, USD and Custom) <br/>
 to use <br/>
 <br/>
 <br/>
-//this use for edittext auto format like 1000 => 1,000 etc just type any number
+//this use for edittext auto format like 1000 => 1,000 etc just type any number<br/>
   <com.congfandi.lib.EditTextRupiah<br/>
         android:id="@+id/counting"<br/>
         android:layout_width="match_parent"<br/>
@@ -12,7 +12,7 @@ to use <br/>
 <br/>
 <br/>
 <br/>
-//this text view have any methode
+//this text view have any methode<br/>
    <com.congfandi.lib.TextViewRupiah<br/>
         android:id="@+id/hasil"<br/>
         android:layout_width="wrap_content"<br/>
