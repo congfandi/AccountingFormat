@@ -1,7 +1,11 @@
 # AccountingFormat
+Accounting Format Library<br/>
 Edittext and TextView Accounting format (IDR, USD and Custom) <br/>
-to use <br/>
+youtube : https://youtu.be/nLXjihhx_sk
 <br/>
+
+<br/>
+to use <br/>
 <br/>
 //this use for edittext auto format like 1000 => 1,000 etc just type any number<br/>
   <com.congfandi.lib.EditTextRupiah<br/>
