@@ -13,6 +13,10 @@ to use <br/>
         android:layout_width="match_parent"<br/>
         android:layout_height="wrap_content"<br/>
         android:layout_below="@+id/oke" /><br/>
+        
+        to get number only without node, just call<br/>
+        counting.getNumber();
+        
 <br/>
 <br/>
 <br/>
