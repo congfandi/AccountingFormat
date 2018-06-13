@@ -14,7 +14,7 @@ allprojects {
   **Step 2.** Add the dependency
 ```gradle
 dependencies {
-	        implementation 'com.github.congfandi:AccountingFormat:0.0.1'
+	        implementation 'com.github.congfandi:AccountingFormat:0.0.2'
 	}
   ```
   **Step 3.** implementation code
