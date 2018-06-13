@@ -1,5 +1,6 @@
 package com.congfandi.lib;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.util.AttributeSet;
 import android.widget.EditText;
@@ -10,6 +11,17 @@ import android.widget.TextView;
  */
 
 public class TextViewRupiah extends TextView {
+    private Separator separator = Separator.DOT;
+
+    public Separator getSeparator() {
+        return separator;
+    }
+
+    public TextViewRupiah setSeparator(Separator separator) {
+        this.separator = separator;
+        return this;
+    }
+
     public TextViewRupiah(final Context context) {
         super(context);
     }
@@ -22,7 +34,7 @@ public class TextViewRupiah extends TextView {
     private String toRp(String angka) {
         String hasil = "";
         String asli = "";
-        angka = angka.replaceAll(",", "");
+        angka = angka.replaceAll(",", "").replace("Rp.", "");
         try {
             angka = "" + Integer.parseInt(angka);
         } catch (NumberFormatException e) {
@@ -34,42 +46,61 @@ public class TextViewRupiah extends TextView {
             if (asli.length() % 3 == 0 && i != 0)
                 hasil = "," + hasil;
         }
-        return hasil;
+
+        return hasil.replaceAll(",", getSeparator() == Separator.DOT ? "." : ",");
     }
 
-    public void convertToIDR(EditText input) {
+    @SuppressLint("SetTextI18n")
+    public TextViewRupiah convertToIDR(EditText input) {
         setText("Rp." + toRp(input.getText().toString()));
+        return this;
     }
 
-    public void convertToIDR(TextView input) {
+    @SuppressLint("SetTextI18n")
+    public TextViewRupiah convertToIDR(TextView input) {
         setText("Rp." + toRp(input.getText().toString()));
+        return this;
     }
 
-    public void convertToIDR(String input) {
+    @SuppressLint("SetTextI18n")
+    public TextViewRupiah convertToIDR(String input) {
         setText("Rp." + toRp(input));
+        return this;
     }
 
-    public void convertToDollar(EditText input) {
+    @SuppressLint("SetTextI18n")
+    public TextViewRupiah convertToDollar(EditText input) {
         setText("$" + toRp(input.getText().toString()));
+        return this;
     }
 
-    public void convertToDollar(TextView input) {
+    @SuppressLint("SetTextI18n")
+    public TextViewRupiah convertToDollar(TextView input) {
         setText("$" + toRp(input.getText().toString()));
+        return this;
     }
 
-    public void convertToDollar(String input) {
-        setText("$" + toRp(input.toString()));
+    @SuppressLint("SetTextI18n")
+    public TextViewRupiah convertToDollar(String input) {
+        setText("$" + toRp(input));
+        return this;
     }
 
-    public void convertCustom(String format, EditText input) {
+    @SuppressLint("SetTextI18n")
+    public TextViewRupiah convertCustom(String format, EditText input) {
         setText(format + "" + toRp(input.getText().toString()));
+        return this;
     }
 
-    public void convertCustom(String format, TextView input) {
+    @SuppressLint("SetTextI18n")
+    public TextViewRupiah convertCustom(String format, TextView input) {
         setText(format + "" + toRp(input.getText().toString()));
+        return this;
     }
 
-    public void convertCustom(String format, String input) {
-        setText(format + "" + toRp(input.toString()));
+    @SuppressLint("SetTextI18n")
+    public TextViewRupiah convertCustom(String format, String input) {
+        setText(format + "" + toRp(input));
+        return this;
     }
 }
