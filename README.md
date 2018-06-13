@@ -37,7 +37,7 @@ dependencies {
                   Log.d("TAG", "result: "+count.getNumber());//getting number from edittex
 
                 hasil
-                        .setSeparator(Separator.COMA)//separator of Textview mode
+                        .setSeparator(Separator.COMA)//separator of Textview mode. Separator.COMA = (,) and Separator.DOT = (.)
                         .convertCustom("USD", "1234");//custom textview show
  ```
  **All Method**
